@@ -1,6 +1,7 @@
 from logging import captureWarnings, getLogger
 from logging.handlers import SysLogHandler
 from typing import Union
+from os import environ
 
 from discord import Member, Message, Reaction, User
 from discord.ext.commands import Bot
@@ -41,4 +42,4 @@ if __name__ == "__main__":
         fetch_offline_members=False,
         guild_subscriptions=False,
         assume_unsync_clock=True,
-    ).run("DISCORD_TOKEN")
+    ).run(environ["DISCORD_TOKEN"])
