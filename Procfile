@@ -1,2 +1,2 @@
-web: gunicorn PostFurryDiscordRolesBot.wsgi
+web: gunicorn --chdir PostFurryDiscordRolesBot PostFurryDiscordRolesBot.wsgi
 worker: python server.py
